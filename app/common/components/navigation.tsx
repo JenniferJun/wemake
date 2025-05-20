@@ -87,8 +87,8 @@ const menus = [
         to: "/jobs?type=internship",
       },
       {
-        name: "Submit a Job",
-        description: "Submit a job to our community",
+        name: "Post a Job",
+        description: "Post a job to our community",
         to: "/jobs/submit",
       },
     ],
@@ -175,10 +175,10 @@ export default function Navigation({
                               "select-none rounded-md transition-colors focus:bg-accent  hover:bg-accent",
                               (item.to === "/products/promote" ||
                                 item.to === "/jobs/submit") &&
-                              "col-span-2 bg-primary/10 hover:bg-primary/20 focus:bg-primary/20",
+                                "col-span-2 bg-primary/10 hover:bg-primary/20 focus:bg-primary/20",
                             ])}
                           >
-                            <NavigationMenuLink>
+                            <NavigationMenuLink asChild>
                               <Link
                                 className="p-3 space-y-1 block leading-none no-underline outline-none"
                                 to={item.to}
@@ -227,7 +227,7 @@ export default function Navigation({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Avatar>
-                <AvatarImage src="/1720661096043.jpeg" />
+                <AvatarImage src="https://github.com/serranoarevalo.png" />
                 <AvatarFallback>N</AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
