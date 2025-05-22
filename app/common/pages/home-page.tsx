@@ -3,7 +3,7 @@ import type { MetaFunction } from "react-router";
 import { ProductCard } from "~/features/products/components/product-card";
 import { Button } from "../components/ui/button";
 import { PostCard } from "~/features/community/components/post-card";
-import IdeaCard from "~/features/ideas/components/idea-card";
+import { IdeaCard } from "~/features/ideas/components/idea-card";
 import { JobCard } from "~/features/jobs/components/job-card";
 import { TeamCard } from "~/features/teams/components/team-card";
 import { getProductsByDateRange } from "~/features/products/queries";
@@ -11,6 +11,7 @@ import { DateTime } from "luxon";
 import type { Route } from "./+types/home-page";
 import { getPosts } from "~/features/community/queries";
 import { getGptIdeas } from "~/features/ideas/queries";
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -97,15 +98,15 @@ export default function HomePage({ loaderData }: Route.ComponentProps) {
             <Link to="/ideas">Explore all ideas &rarr;</Link>
           </Button>
         </div>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {loaderData.ideas.map((idea) => (
           <IdeaCard
-            key={`ideaId-${index}`}
-            id={`ideaId-${index}`}
-            title="A startup that creates an AI-powered generated personal trainer, delivering customized fitness recommendations and tracking of progress using a mobile app to track workouts and progress as well as a website to manage the business."
-            viewsCount={123}
-            postedAt="12 hours ago"
-            likesCount={12}
-            claimed={index % 2 === 0}
+            key={idea.gpt_idea_id}
+            id={idea.gpt_idea_id ?? 0}
+            title={idea.idea ?? ''}
+            viewsCount={idea.views ?? 0}
+            postedAt={idea.created_at ?? ''}
+            likesCount={idea.likes ?? 0}
+            claimed={idea.is_claimed ?? false}
           />
         ))}
       </div>
