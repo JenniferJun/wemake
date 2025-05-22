@@ -31,12 +31,12 @@ INSERT INTO jobs (position, overview, responsibilities, qualifications, benefits
 ('DevOps Engineer', 'Manage infrastructure', 'Maintain cloud services', '3+ years experience', 'Health benefits', 'AWS, Docker', 'CloudTech', 'cloudtech.png', 'Boston', 'https://cloudtech.com/jobs', 'full-time', 'remote', '$150,000 - $250,000');
 
 -- Seed Team
-INSERT INTO team (product_name, team_size, equity_split, product_stage, roles, product_description) VALUES
-('CodeGPT', 5, 20, 'product', '2 developers, 2 designers, 1 PM', 'AI-powered code completion tool'),
-('DevFlow', 3, 33, 'mvp', '2 developers, 1 designer', 'Development workflow platform'),
-('TaskMaster', 4, 25, 'product', '2 developers, 1 designer, 1 PM', 'Task management application'),
-('SocialHub', 6, 16, 'mvp', '3 developers, 2 designers, 1 PM', 'Social platform for developers'),
-('TechStore', 5, 20, 'product', '2 developers, 2 designers, 1 PM', 'Developer marketplace');
+INSERT INTO teams (product_name, team_size, equity_split, product_stage, roles, product_description, team_leader_id) VALUES
+('CodeGPT', 5, 20, 'product', '2 developers, 2 designers, 1 PM', 'AI-powered code completion tool', '1499a939-4edc-4ee7-9f79-0af6b483db67'),
+('DevFlow', 3, 33, 'mvp', '2 developers, 1 designer', 'Development workflow platform', '1499a939-4edc-4ee7-9f79-0af6b483db67'),
+('TaskMaster', 4, 25, 'product', '2 developers, 1 designer, 1 PM', 'Task management application', '1499a939-4edc-4ee7-9f79-0af6b483db67'),
+('SocialHub', 6, 16, 'mvp', '3 developers, 2 designers, 1 PM', 'Social platform for developers', '1499a939-4edc-4ee7-9f79-0af6b483db67'),
+('TechStore', 5, 20, 'product', '2 developers, 2 designers, 1 PM', 'Developer marketplace', '1499a939-4edc-4ee7-9f79-0af6b483db67');
 
 -- Seed GPT Ideas
 INSERT INTO gpt_ideas (idea, views, claimed_by) VALUES

@@ -50,6 +50,13 @@
       "when": 1747878788546,
       "tag": "0006_moaning_next_avengers",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1747892147564,
+      "tag": "0007_chubby_nightshade",
+      "breakpoints": true
     }
   ]
 }
