@@ -13,9 +13,9 @@ import {
 import { products } from "../products/schema";
 import { posts } from "../community/schema";
 
-// export const users = pgSchema("auth").table("users", {
-//   id: uuid().primaryKey(),
-// });
+const users = pgSchema("auth").table("users", {
+  id: uuid().primaryKey(),
+});
 
 export const roles = pgEnum("role", [
   "developer",
