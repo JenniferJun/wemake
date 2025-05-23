@@ -56,7 +56,7 @@ export default function HomePage({ loaderData }: Route.ComponentProps) {
             key={product.product_id}
             id={product.product_id}
             name={product.name}
-            description={product.description}
+            description={product.tagline}
             reviewsCount={product.reviews}
             viewsCount={product.views}
             votesCount={product.upvotes}
@@ -103,12 +103,12 @@ export default function HomePage({ loaderData }: Route.ComponentProps) {
         {loaderData.ideas.map((idea) => (
           <IdeaCard
             key={idea.gpt_idea_id}
-            id={idea.gpt_idea_id ?? 0}
-            title={idea.idea ?? ''}
-            viewsCount={idea.views ?? 0}
-            postedAt={idea.created_at ?? ''}
-            likesCount={idea.likes ?? 0}
-            claimed={idea.is_claimed ?? false}
+            id={idea.gpt_idea_id}
+            title={idea.idea}
+            viewsCount={idea.views}
+            postedAt={idea.created_at}
+            likesCount={idea.likes}
+            claimed={idea.is_claimed}
           />
         ))}
       </div>
