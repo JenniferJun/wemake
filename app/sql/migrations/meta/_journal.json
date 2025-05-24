@@ -57,6 +57,13 @@
       "when": 1747892147564,
       "tag": "0007_chubby_nightshade",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1748057711220,
+      "tag": "0008_superb_vermin",
+      "breakpoints": true
     }
   ]
 }
