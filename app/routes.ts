@@ -50,8 +50,8 @@ export default [
           index("features/products/pages/product-reviews-page.tsx"),
         ]),
       ]),
+      route("/visit", "features/products/pages/product-visit-page.tsx"),
     ]),
-    route("/visit", "features/products/pages/product-visit-page.tsx"),
   ]),
   ...prefix("/ideas", [
     index("features/ideas/pages/ideas-page.tsx"),
@@ -75,6 +75,7 @@ export default [
         route("/complete", "features/auth/pages/social-complete-page.tsx"),
       ]),
     ]),
+    route("/logout", "features/auth/pages/logout-page.tsx"),
   ]),
   ...prefix("/community", [
     index("features/community/pages/community-page.tsx"),
