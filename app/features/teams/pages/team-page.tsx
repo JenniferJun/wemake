@@ -1,5 +1,5 @@
 import { Hero } from "~/common/components/hero";
-import { Route } from "./+types/team-page";
+import type { Route } from "./+types/team-page";
 import { Button } from "~/common/components/ui/button";
 import {
   Avatar,
@@ -16,13 +16,14 @@ import {
   CardTitle,
 } from "~/common/components/ui/card";
 import { getTeamById } from "../queries";
-
+import { makeSSRClient } from "~/supa-client";
 export const meta: Route.MetaFunction = () => [
   { title: "Team Details | wemake" },
 ];
 
-export const loader = async ({ params }: Route.LoaderArgs) => {
-  const team = await getTeamById(params.teamId);
+export const loader = async ({ params, request }: Route.LoaderArgs) => {
+  const { client, headers } = makeSSRClient(request);
+  const team = await getTeamById(client, { teamId: params.teamId });
   return { team };
 };
 

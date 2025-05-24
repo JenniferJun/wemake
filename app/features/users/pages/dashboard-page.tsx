@@ -1,6 +1,9 @@
 import { Line } from "recharts";
-import { ChartConfig, ChartTooltipContent } from "~/common/components/ui/chart";
-import { ChartTooltip } from "~/common/components/ui/chart";
+import type { ChartConfig } from "~/common/components/ui/chart";
+import {
+  ChartTooltipContent,
+  ChartTooltip,
+} from "~/common/components/ui/chart";
 import {
   Card,
   CardContent,

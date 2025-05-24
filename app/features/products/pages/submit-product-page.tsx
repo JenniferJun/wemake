@@ -7,7 +7,7 @@ import { Label } from "~/common/components/ui/label";
 import { useState } from "react";
 import { Button } from "~/common/components/ui/button";
 import type { Route } from "./+types/submit-product-page";
-
+import { makeSSRClient } from "~/supa-client";
 export const meta: Route.MetaFunction = () => {
   return [
     { title: "Submit Product | wemake" },
