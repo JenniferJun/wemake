@@ -51,6 +51,7 @@ export default [
         ]),
       ]),
     ]),
+    route("/visit", "features/products/pages/product-visit-page.tsx"),
   ]),
   ...prefix("/ideas", [
     index("features/ideas/pages/ideas-page.tsx"),
