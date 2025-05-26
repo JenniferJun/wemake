@@ -145,10 +145,16 @@ export default function Navigation({
   isLoggedIn,
   hasNotifications,
   hasMessages,
+  username,
+  avatar,
+  name,
 }: {
   isLoggedIn: boolean;
   hasNotifications: boolean;
   hasMessages: boolean;
+  username?: string;
+  avatar?: string | null;
+  name?: string;
 }) {
   return (
     <nav className="flex px-20 h-16 items-center justify-between backdrop-blur fixed top-0 left-0 right-0 z-50 bg-background/50">
@@ -175,7 +181,7 @@ export default function Navigation({
                               "select-none rounded-md transition-colors focus:bg-accent  hover:bg-accent",
                               (item.to === "/products/promote" ||
                                 item.to === "/jobs/submit") &&
-                                "col-span-2 bg-primary/10 hover:bg-primary/20 focus:bg-primary/20",
+                              "col-span-2 bg-primary/10 hover:bg-primary/20 focus:bg-primary/20",
                             ])}
                           >
                             <NavigationMenuLink asChild>
@@ -227,14 +233,19 @@ export default function Navigation({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Avatar>
-                <AvatarImage src="https://github.com/serranoarevalo.png" />
-                <AvatarFallback>N</AvatarFallback>
+                {avatar ? (
+                  <AvatarImage src={avatar} />
+                ) : (
+                  <AvatarFallback>{name?.[0]}</AvatarFallback>
+                )}
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
               <DropdownMenuLabel className="flex flex-col">
-                <span className="font-medium">John Doe</span>
-                <span className="text-xs text-muted-foreground">@username</span>
+                <span className="font-medium">{name}</span>
+                <span className="text-xs text-muted-foreground">
+                  @{username}
+                </span>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
