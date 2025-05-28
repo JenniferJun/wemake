@@ -71,6 +71,13 @@
       "when": 1748058689170,
       "tag": "0009_conscious_random",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1748461623460,
+      "tag": "0010_deep_thunderbird",
+      "breakpoints": true
     }
   ]
 }
