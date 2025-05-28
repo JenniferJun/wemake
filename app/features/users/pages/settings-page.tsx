@@ -229,7 +229,7 @@ export default function SettingsPage({
               <span className=" text-muted-foreground">
                 Allowed formats: PNG, JPEG
               </span>
-              <span className=" text-muted-foreground">Max file size: 1MB</span>
+              <span className=" text-muted-foreground">Max file size: 2MB</span>
             </div>
             <Button className="w-full">Update avatar</Button>
           </div>

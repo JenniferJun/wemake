@@ -223,7 +223,7 @@ export default function SubmitPage({
             <span className=" text-muted-foreground">
               Allowed formats: PNG, JPEG
             </span>
-            <span className=" text-muted-foreground">Max file size: 1MB</span>
+            <span className=" text-muted-foreground">Max file size: 2MB</span>
           </div>
         </div>
       </Form>
