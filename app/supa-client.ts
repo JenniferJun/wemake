@@ -46,10 +46,10 @@ export type Database = MergeDeep<
   }
 >;
 
-// export const browserClient = createBrowserClient<Database>(
-//   "https://iofqkeyycvzkxikggoqv.supabase.co",
-//   "ey "
-// );
+export const browserClient = createBrowserClient<Database>(
+  "https://iofqkeyycvzkxikggoqv.supabase.co",
+  "ey "
+);
 
 export const makeSSRClient = (request: Request) => {
   const headers = new Headers();
