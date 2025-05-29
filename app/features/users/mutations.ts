@@ -1,5 +1,5 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import type { Database } from "~/supa-client";
+import { Database } from "~/supa-client";
 
 export const updateUser = async (
   client: SupabaseClient<Database>,
@@ -40,6 +40,20 @@ export const updateUserAvatar = async (
     .from("profiles")
     .update({ avatar: avatarUrl })
     .eq("profile_id", id);
+  if (error) {
+    throw error;
+  }
+};
+
+export const seeNotification = async (
+  client: SupabaseClient<Database>,
+  { userId, notificationId }: { userId: string; notificationId: string }
+) => {
+  const { error } = await client
+    .from("notifications")
+    .update({ seen: true })
+    .eq("notification_id", Number(notificationId))
+    .eq("target_id", userId);
   if (error) {
     throw error;
   }
