@@ -90,6 +90,7 @@ export default function App({ loaderData }: Route.ComponentProps) {
           isLoggedIn,
           name: loaderData.profile?.name,
           username: loaderData.profile?.username,
+          userId: loaderData.user?.id,
           avatar: loaderData.profile?.avatar,
         }}
       />

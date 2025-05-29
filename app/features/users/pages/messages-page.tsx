@@ -1,5 +1,5 @@
 import { MessageCircleIcon } from "lucide-react";
-import type { Route } from "./+types/messages-page";
+import { Route } from "./+types/messages-page";
 
 export const meta: Route.MetaFunction = () => {
   return [{ title: "Messages | wemake" }];
