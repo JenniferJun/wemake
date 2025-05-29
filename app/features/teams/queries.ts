@@ -1,5 +1,5 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import type { Database } from "~/supa-client";
+import { Database } from "~/supa-client";
 
 export const getTeams = async (
   client: SupabaseClient<Database>,
@@ -39,11 +39,12 @@ export const getTeamById = async (
       team_leader:profiles!inner(
         name,
         avatar,
-        role
+        role,
+        username
       )
       `
     )
-    .eq("team_id", teamId)
+    .eq("team_id", Number(teamId))
     .single();
   if (error) throw error;
   return data;
