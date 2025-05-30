@@ -78,6 +78,13 @@
       "when": 1748461623460,
       "tag": "0010_deep_thunderbird",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1748564108916,
+      "tag": "0011_round_major_mapleleaf",
+      "breakpoints": true
     }
   ]
 }

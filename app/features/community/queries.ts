@@ -110,7 +110,7 @@ export const getPostById = async (
   const { data, error } = await client
     .from("community_post_detail")
     .select("*")
-    .eq("post_id", postId)
+    .eq("post_id", Number(postId))
     .single();
   if (error) throw error;
   return data;
@@ -140,7 +140,7 @@ export const getReplies = async (
       )
       `
     )
-    .eq("post_id", postId)
+    .eq("post_id", Number(postId))
     .order("created_at", { ascending: false });
   if (error) throw error;
   return data;

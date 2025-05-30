@@ -21,7 +21,7 @@ import { getUserProfile } from "../queries";
 import { makeSSRClient } from "~/supa-client";
 
 export const meta: Route.MetaFunction = ({ data }) => {
-  return [{ title: `${data.user.name} | wemake` }];
+  return [{ title: `${data?.user.name} | wemake` }];
 };
 
 export const loader = async ({

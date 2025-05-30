@@ -6,8 +6,8 @@ import { getJobById } from "../queries";
 import { DateTime } from "luxon";
 import { makeSSRClient } from "~/supa-client";
 
-export const meta: Route.MetaFunction = ({ data }) => {
-  return [{ title: `${data.job.position} | wemake` }];
+export const meta: Route.MetaFunction = ({ data }: Route.MetaArgs) => {
+  return [{ title: `${data?.job.position} | wemake` }];
 };
 
 export const loader = async ({ request, params }: Route.LoaderArgs) => {
